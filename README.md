@@ -16,3 +16,8 @@
 
 - https://dm-lalwani.github.io/Assignments/html-day-4-tributePage/index.html
 - https://dm-lalwani.github.io/Assignments/html-day-4-hw-iFrames/index.html
+
+# CSS Day 1
+
+- https://dm-lalwani.github.io/Assignments/css-day-1-cafeMenu/index.html
+- https://dm-lalwani.github.io/Assignments/css-day-2-hw-netflix/index.html
