@@ -11,3 +11,8 @@
 # Weekly Test 2
 
 - https://dm-lalwani.github.io/Assignments/weekly-test-2/index.html
+
+# Day 4
+
+- https://dm-lalwani.github.io/Assignments/html-day-4-tributePage/index.html
+- https://dm-lalwani.github.io/Assignments/html-day-4-hw-iFrames/index.html
