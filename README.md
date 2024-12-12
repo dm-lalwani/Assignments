@@ -27,7 +27,12 @@
 - https://dm-lalwani.github.io/Assignments/css-day-2-color-marker/index.html
 - https://dm-lalwani.github.io/Assignments/css-day-2-hw-background/index.html
 
-# CSS Day 2
+# CSS Day 3
 
 - https://dm-lalwani.github.io/Assignments/css-day-3-nutrition-label/index.html
 - https://dm-lalwani.github.io/Assignments/css-day-3-hw-typography/index.html
+
+# CSS Day 4
+
+- https://dm-lalwani.github.io/Assignments/css-day-4-shoe/index.html
+- https://dm-lalwani.github.io/Assignments/css-day-4-hw-coffee/index.html
