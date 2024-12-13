@@ -36,3 +36,12 @@
 
 - https://dm-lalwani.github.io/Assignments/css-day-4-shoe/index.html
 - https://dm-lalwani.github.io/Assignments/css-day-4-hw-coffee/index.html
+
+# CSS Day 5
+
+- https://dm-lalwani.github.io/Assignments/css-day-5-box-model/index.html
+- https://dm-lalwani.github.io/Assignments/css-day-5-hw-box-model/index.html
+
+# CSS Day 6
+
+- https://dm-lalwani.github.io/Assignments/css-day-6-hw-cat-flex/index.html
