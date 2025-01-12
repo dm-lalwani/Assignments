@@ -45,3 +45,7 @@
 # CSS Day 6
 
 - https://dm-lalwani.github.io/Assignments/css-day-6-hw-cat-flex/index.html
+
+# JS weekly Test 3
+
+- https://dm-lalwani.github.io/Assignments/js-weekly-test-3/index.html
