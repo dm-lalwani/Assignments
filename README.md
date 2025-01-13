@@ -49,3 +49,7 @@
 # JS weekly Test 3
 
 - https://dm-lalwani.github.io/Assignments/js-weekly-test-3/index.html
+
+# DOM Project 1
+
+- https://dm-lalwani.github.io/Assignments/dom-project-1/index.html
