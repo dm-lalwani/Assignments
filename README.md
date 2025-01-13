@@ -1,3 +1,5 @@
+## Click on the links to view the Assignments
+
 # Day 2
 
 - https://dm-lalwani.github.io/Assignments/html-day-2-cat-project/index.html
@@ -53,3 +55,7 @@
 # DOM Project 1
 
 - https://dm-lalwani.github.io/Assignments/dom-project-1/index.html
+
+# Change Color Shape
+
+- https://dm-lalwani.github.io/Assignments/change-color-shape/index.html
