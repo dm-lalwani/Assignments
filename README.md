@@ -59,3 +59,7 @@
 # Change Color Shape
 
 - https://dm-lalwani.github.io/Assignments/change-color-shape/index.html
+
+# JS Dark Mode
+
+- https://dm-lalwani.github.io/Assignments/js-dark-mode/index.html
