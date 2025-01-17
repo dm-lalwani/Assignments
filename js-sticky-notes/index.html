@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Note App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main_container">
+        <div id="left_container">
+            <div>
+                <textarea id="text_area" placeholder="Write your note here..."></textarea>
+                <input type="color" id="color">
+            </div>
+
+            <div id="button">
+                <button id="add_note">Add Sticky Note</button>
+                <button id="delete_all">Delete All</button>
+            </div>
+        </div>
+
+        <div id="right_container">
+            <h1>Your Notes Wall</h1>
+            <p id="para">You have not added a note yet.</p>
+            <div id="notes_container"></div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -62,4 +62,17 @@
 
 # JS Dark Mode
 
+-
 - https://dm-lalwani.github.io/Assignments/js-dark-mode/index.html
+
+# JS Keyboard Generator
+
+- https://dm-lalwani.github.io/Assignments/js-keyboard-generator/index.html
+
+# JS Age Calculator
+
+- https://dm-lalwani.github.io/Assignments/js-age-calculator/index.html
+
+# JS Sticky Notes
+
+- https://dm-lalwani.github.io/Assignments/js-sticky-notes/index.html

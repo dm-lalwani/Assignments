@@ -1,0 +1,83 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+}
+input.keyboard {
+  width: 90%;
+  padding: 10px;
+  font-size: 1.2rem;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input.keyboard:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+.info-box {
+  margin: 20px 0;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+.info-box p {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+.info-box.keycode {
+  background-color: #e8f5e9;
+}
+.info-box.keyboard {
+  background-color: #ffebee;
+}
+.theme-toggle {
+  background: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.theme-toggle:hover {
+  background-color: #45a049;
+}
+.dark-mode {
+  background-color: #333;
+  color: #f4f4f4;
+}
+.dark-mode input.keyboard {
+  background-color: #444;
+  color: white;
+  border: 2px solid #555;
+}
+.dark-mode .info-box {
+  border: 2px solid #555;
+}
+.dark-mode .info-box.keycode {
+  background-color: #2e7d32;
+}
+.dark-mode .info-box.keyboard {
+  background-color: #c62828;
+}
+.dark-mode .theme-toggle {
+  background: #666;
+}
