@@ -62,7 +62,6 @@
 
 # JS Dark Mode
 
--
 - https://dm-lalwani.github.io/Assignments/js-dark-mode/index.html
 
 # JS Keyboard Generator
@@ -76,3 +75,11 @@
 # JS Sticky Notes
 
 - https://dm-lalwani.github.io/Assignments/js-sticky-notes/index.html
+
+# JS Feedback UI
+
+- https://dm-lalwani.github.io/Assignments/js-feedback-ui/index.html
+
+# JS Emoji Project
+
+- https://dm-lalwani.github.io/Assignments/js-emoji-project/index.html
