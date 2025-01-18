@@ -83,3 +83,11 @@
 # JS Emoji Project
 
 - https://dm-lalwani.github.io/Assignments/js-emoji-project/index.html
+
+# JS Weekly Test 4
+
+- https://dm-lalwani.github.io/Assignments/js-weekly-test-4/index.html
+
+# JS Leader Board Project
+
+- https://dm-lalwani.github.io/Assignments/js-leaderboard-project/index.html
