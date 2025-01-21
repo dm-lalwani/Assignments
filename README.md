@@ -91,3 +91,11 @@
 # JS Leader Board Project
 
 - https://dm-lalwani.github.io/Assignments/js-leaderboard-project/index.html
+
+# JS Digital Clock
+
+- https://dm-lalwani.github.io/Assignments/js-digital-clock/index.html
+
+# JS Stop Watch
+
+- https://dm-lalwani.github.io/Assignments/js-stop-watch/index.html
