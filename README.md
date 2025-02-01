@@ -103,3 +103,7 @@
 # JS Weekly Test 6
 
 - https://dm-lalwani.github.io/Assignments/js-weekly-test-6/index.html
+
+# JS Dad Joke Generator
+
+- https://dm-lalwani.github.io/Assignments/js-dad-joke-generator/index.html

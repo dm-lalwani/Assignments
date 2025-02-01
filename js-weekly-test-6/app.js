@@ -1,182 +1,66 @@
-const rows = 4;
-const cols = 4;
-const positions = Array.from(new Array(rows * cols), (_, i) => i);
-const delay = 2000;
-const symbols = [
-  '🍇',
-  '🍉',
-  '🚗',
-  '🍌',
-  '🏠',
-  '🥭',
-  '🍎',
-  '🐯',
-  '🍒',
-  '🍓',
-  '🐵',
-  '🥝',
-  '🍿',
-  '🏀',
-  '🎱',
-  '🐻',
-  '🍜',
-  '🍢',
-  '🎓',
-  '🍤',
-  '🦀',
-  '🍦',
-  '🍩',
-  '🎂',
-  '🍫',
-  '🍭',
-  '🍼',
-  '🪔',
-  '🍺',
-  '🐱',
-  '🐶',
-];
+const tiles = document.querySelectorAll(".tile");
+const attemptsEl = document.getElementById("attempts");
+const restartBtn = document.getElementById("restart");
 
-let activeTiles = [];
-let attempts = 0;
+const symbols = ["🍇", "🍉", "🚗", "🍌", "🏠", "🥭", "🍎", "🐯"];
 let randomizedSymbols = [];
-let isResetInProgress = false;
-let timeoutIdx;
-const gameFrontEl = document.querySelector('.game-front');
-const gameBackEl = document.querySelector('.game-back');
-const outputEl = document.querySelector('output');
-const restartBtn = document.querySelector('.restart');
+let openedTiles = [];
+let attempts = 0;
 
-const createGridFragment = (m, n, { type = "div", ...properties }) => {
-  const fragment = document.createDocumentFragment();
-  let idx = 0;
-  for (let i = 0; i < m; i++) {
-    for (let j = 0; j < n; j++) {
-      const element = createElement(type, {
-        ...properties,
-        dataset: { x: i, y: j, idx },
-      });
-      fragment.appendChild(element);
-      idx++;
-    }
+// Duplicate symbols to create pairs and shuffle
+function shuffleSymbols() {
+  const pairs = [...symbols, ...symbols];
+  pairs.sort(() => Math.random() - 0.5);
+  randomizedSymbols = pairs;
+}
+
+// Handle tile click
+function handleTileClick(e) {
+  const tile = e.target;
+  const index = tile.dataset.index;
+
+  if (tile.textContent || openedTiles.length === 2) return;
+
+  tile.textContent = randomizedSymbols[index];
+  openedTiles.push(tile);
+
+  if (openedTiles.length === 2) {
+    attempts++;
+    attemptsEl.textContent = attempts;
+    checkForMatch();
+  }
+}
+
+// Check if two opened tiles match
+function checkForMatch() {
+  const [tile1, tile2] = openedTiles;
+
+  if (tile1.textContent === tile2.textContent) {
+    tile1.classList.add("matched");
+    tile2.classList.add("matched");
+  } else {
+    setTimeout(() => {
+      tile1.textContent = "";
+      tile2.textContent = "";
+    }, 1000);
   }
 
-  return fragment;
-};
+  openedTiles = [];
+}
 
-const createElement = (type = "div", properties) => {
-  const element = document.createElement(type);
-  Object.entries(properties).forEach(([key, value]) => {
-    if (typeof value === "object") {
-      Object.entries(value).forEach(([subKey, subValue]) => {
-        element[key][subKey] = subValue;
-      });
-      return;
-    }
-
-    element[key] = value;
-  });
-  return element;
-};
-
-const getRandomSymbols = (rows, cols, items) => {
-  const selectedSymbols = Array.from(
-    new Array((rows * cols) / 2),
-    () => items[Math.floor(Math.random() * items.length)]
-  );
-  const totalSymbols = selectedSymbols.concat(selectedSymbols);
-
-  const randomizedSymbols = [];
-  const length = totalSymbols.length;
-  for (let i = 0; i < length; i++) {
-    randomizedSymbols.push(...totalSymbols.splice(Math.floor(Math.random() * totalSymbols.length), 1));
-  }
-
-  return randomizedSymbols;
-};
-
-const addClassToGameElements = (elements, className) => {
-  elements.forEach(pos => {
-    gameFrontEl.children[pos].classList.add(className);
-    gameBackEl.children[pos].classList.add(className);
-  });
-};
-
-const removeClassFromGameElement = (elements, className) => {
-  elements.forEach(pos => {
-    gameFrontEl.children[pos].classList.remove(className);
-    gameBackEl.children[pos].classList.remove(className);
-  });
-};
-
-const startGame = async (init = false) => {
-  if (isResetInProgress) {
-    return;
-  }
-
-  randomizedSymbols = [];
-  activeTiles = [];
+// Restart game
+function restartGame() {
   attempts = 0;
-  isResetInProgress = true;
-  outputEl.textContent = attempts;
-
-  if (!init) {
-    gameFrontEl.classList.add('reset');
-    gameBackEl.classList.add('reset');
-
-    removeClassFromGameElement(positions, 'active');
-    removeClassFromGameElement(positions, 'match');
-
-    await new Promise(r => setTimeout(r, delay / 2)); // if not delayed then the open cards will reveal the next symbol
-  }
-
-  randomizedSymbols = getRandomSymbols(rows, cols, symbols);
-  gameBackEl.childNodes.forEach((el, idx) => {
-    el.textContent = randomizedSymbols[idx];
+  attemptsEl.textContent = attempts;
+  openedTiles = [];
+  shuffleSymbols();
+  tiles.forEach((tile) => {
+    tile.textContent = "";
+    tile.classList.remove("matched");
   });
+}
 
-  gameFrontEl.classList.remove('reset');
-  gameBackEl.classList.remove('reset');
-  isResetInProgress = false;
-};
-
-gameFrontEl.appendChild(createGridFragment(rows, cols, { type: 'button', className: 'tile' }));
-gameBackEl.appendChild(createGridFragment(rows, cols, { type: 'button', className: 'tile back-tile' }));
-
-gameFrontEl.addEventListener('click', e => {
-  const idx = e.target.dataset.idx;
-
-  if (idx == null || isResetInProgress || e.target.classList.contains('match')) {
-    return;
-  }
-
-  attempts++;
-
-  if (activeTiles.length === 2) {
-    if (timeoutIdx) {
-      clearTimeout(timeoutIdx);
-    }
-    removeClassFromGameElement(activeTiles, 'active');
-    activeTiles = [];
-  }
-
-  activeTiles.push(idx);
-
-  if (activeTiles.length === 2) {
-    if (randomizedSymbols[activeTiles[0]] === randomizedSymbols[activeTiles[1]]) {
-      removeClassFromGameElement(activeTiles, 'active');
-      addClassToGameElements(activeTiles, 'match');
-    }
-
-    timeoutIdx = setTimeout(() => {
-      removeClassFromGameElement(activeTiles, 'active');
-      activeTiles = [];
-    }, delay);
-  }
-
-  e.target.classList.add('active');
-  gameBackEl.children[idx].classList.add('active');
-  outputEl.textContent = attempts;
-});
-
-restartBtn.addEventListener('click', () => startGame());
-startGame(true);
+// Initialize game
+tiles.forEach((tile) => tile.addEventListener("click", handleTileClick));
+restartBtn.addEventListener("click", restartGame);
+shuffleSymbols();

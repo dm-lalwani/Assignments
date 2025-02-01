@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Match Pair Weekly Test</title>
+    <title>Match the Pair</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container text-center relative">
-        <div class="game game-front grid"></div>
-        <div class="game game-back grid"></div>
-        <h2>Attempts: <output>0</output></h2>
-  
-        <button class="btn btn-primary restart">Restart</button>
-      </div>
-      <script src="app.js"></script>
+    <div class="container">
+        <h1>Match the Pair Game</h1>
+        <h2>Attempts: <output id="attempts">0</output></h2>
+        <div class="game-board">
+            <!-- 16 tiles for a 4x4 game -->
+            <button class="tile" data-index="0"></button>
+            <button class="tile" data-index="1"></button>
+            <button class="tile" data-index="2"></button>
+            <button class="tile" data-index="3"></button>
+            <button class="tile" data-index="4"></button>
+            <button class="tile" data-index="5"></button>
+            <button class="tile" data-index="6"></button>
+            <button class="tile" data-index="7"></button>
+            <button class="tile" data-index="8"></button>
+            <button class="tile" data-index="9"></button>
+            <button class="tile" data-index="10"></button>
+            <button class="tile" data-index="11"></button>
+            <button class="tile" data-index="12"></button>
+            <button class="tile" data-index="13"></button>
+            <button class="tile" data-index="14"></button>
+            <button class="tile" data-index="15"></button>
+        </div>
+        <button id="restart">Restart</button>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
