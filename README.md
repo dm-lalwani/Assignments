@@ -99,3 +99,7 @@
 # JS Stop Watch
 
 - https://dm-lalwani.github.io/Assignments/js-stop-watch/index.html
+
+# JS Weekly Test 6
+
+- https://dm-lalwani.github.io/Assignments/js-weekly-test-6/index.html
