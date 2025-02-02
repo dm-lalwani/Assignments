@@ -107,3 +107,11 @@
 # JS Dad Joke Generator
 
 - https://dm-lalwani.github.io/Assignments/js-dad-joke-generator/index.html
+
+# JS Image Search App
+
+- https://dm-lalwani.github.io/Assignments/js-image-search-app/index.html
+
+# JS Pokemon App
+
+- https://dm-lalwani.github.io/Assignments/js-pokemon/index.html
