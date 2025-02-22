@@ -115,3 +115,15 @@
 # JS Pokemon App
 
 - https://dm-lalwani.github.io/Assignments/js-pokemon/index.html
+
+# JS Local Storage App
+
+- https://dm-lalwani.github.io/Assignments/js-local-storage/index.html
+
+# JS Pokemon App
+
+- https://dm-lalwani.github.io/Assignments/js-pokemon/index.html
+
+# Resume AI Project
+
+- https://dm-lalwani.github.io/Assignments/resume_ai/index.html
