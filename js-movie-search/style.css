@@ -1,0 +1,30 @@
+body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .movies {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .movie {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .movie img {
+            width: 100%;
+            height: auto;
+        }
+        .pagination {
+            margin-top: 20px;
+        }
