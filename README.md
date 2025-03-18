@@ -120,9 +120,21 @@
 
 - https://dm-lalwani.github.io/Assignments/js-local-storage/index.html
 
-# JS Pokemon App
+# JS Movie Search App
 
-- https://dm-lalwani.github.io/Assignments/js-pokemon/index.html
+- https://dm-lalwani.github.io/Assignments/js-movie-search/index.html
+
+# JS Data Visualization App
+
+- https://dm-lalwani.github.io/Assignments/js-data-visualization/index.html
+
+# JS Real Time Chart
+
+- https://dm-lalwani.github.io/Assignments/js-real-time-chart/index.html
+
+# JS Endless Scroll App
+
+- https://dm-lalwani.github.io/Assignments/js-endless-scroll/index.html
 
 # Resume AI Project
 
