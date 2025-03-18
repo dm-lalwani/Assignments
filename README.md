@@ -136,6 +136,14 @@
 
 - https://dm-lalwani.github.io/Assignments/js-endless-scroll/index.html
 
+# JS Card Project App
+
+- https://dm-lalwani.github.io/Assignments/js-card-project/index.html
+
+# JS Burger King App
+
+- https://dm-lalwani.github.io/Assignments/js-burger-king/index.html
+
 # Resume AI Project
 
 - https://dm-lalwani.github.io/Assignments/resume_ai/index.html
