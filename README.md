@@ -147,3 +147,7 @@
 # Resume AI Project
 
 - https://dm-lalwani.github.io/Assignments/resume_ai/index.html
+
+# Chat App Project
+
+- https://dm-lalwani.github.io/Assignments/chat_app/index.html
